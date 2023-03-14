@@ -9,23 +9,7 @@ const bot = new Bot({
 bot.joinCommand({ 
 channel: "$getservervar[welcome_channel]", 
 $if: "v4",
-code: `$if[$guildid==1004197544177455198]
-
-<@$authorid>
-$title[:warning: ¡¡LLEGO UN NUEVO TOPO!! :warning:]
-$description[Leete las reglas, no seas topo]
-$color[YELLOW]
-
-$else
-<@$authorid>
-  $author[$usertag se ha unido a $servername;$authoravatar]
-  $description[¡Gracias por unirte a $servername!
-Pasatela bien y recuerda seguir las reglas.]
-
-  $footer[Prescencia de $usertag[$clientid] • Ahora somos $memberscount miembros;$useravatar[$clientid]]
-  $color[GREEN]
-  $addtimestamp
-$endif
+code: `tu comando de bienvenida
 `
 }) 
 
@@ -38,25 +22,18 @@ bot.status({
 
 // Variables //
 bot.variables({
-  prefix: "ox!",
-  lista: "",
-  version: "oxibyte release-r1.56",
+  prefix: "!",
+  version: "g31",
   lang: "es",
   welcome_channel: "0",
   welcome: "off",
-  captcha: "QY7KzofybjGAAJrepFex9Jxleg6KzFNS78A7AHa8sTRbDi3j2aWHnFf0CCFh9MIt8mYtHCKgcWfK19umQY7KzofybjGAAJrepFex9Jxleg6KzFNS78A7AHa8sTRbDi3j2aWHnFf0CCFh9MIt8mYtHCKgcWfK19um",
-  verif_role: "0",
   level: "1",
   xp: "0",
   xpfalta: "230",
   leveling: "false",
   levelingChannel: "0",
-  levelmsg: ":tada: ¡{mention}, has subido al nivel _{level}_!",
-  bio: "undefined",
-  user_message: "",
-  user_ID: "0",
-  deleteDate: "0/0/0000",
-  
+  levelmsg: ":tada: ¡{mention}, has subido al nivel {level}!",
+  bio: "undefined"
 })
 
 bot.readyCommand({
